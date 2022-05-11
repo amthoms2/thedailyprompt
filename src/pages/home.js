@@ -1,11 +1,13 @@
-import Hero from '../components/Hero/Hero'
+// import Hero from '../components/Hero'
+import Nav from '../components/Nav'
 
 import React from 'react'
 
 function Home() {
   return (
     <>
-      <Hero />
+      <Nav />
+      {/* <Hero /> */}
     </>
   )
 }
