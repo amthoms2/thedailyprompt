@@ -1,116 +1,40 @@
 import styled from 'styled-components';
-import { MdKeyboardArrowUp, MdKeyboardArrowDown } from 'react-icons/md';
-
 
 export const HeroContainer = styled.div`
-  background: #0c0c0c;
-  display: flex;
-  justify-content: center;
+  padding: 2.5rem 0;
+  max-width: 700px;
+  margin: 0 auto;
+`;
+
+export const HeroWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  padding: 0 30px;
-  height: 800px;
-  position: relative;
-  z-index: 1;
-`;
-
-export const Background = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-`;
-
-export const LandingPageImage = styled.img`
-  width: 100%;
-  height: 100%;
-  background: #ffff;
-  -o-object-fit: cover;
-  object-fit: cover;
+  justify-content: center;
 `
 
-export const Content = styled.div`
-  z-index: 1;
-  max-width: 120px;
-  position: absolute;
-  padding: 8px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
+export const Img = styled.video`
+  width: 123%;
+  transform: translate(15%, 25px);
+`
 
-export const HeroH1 = styled.h1`
-  color: #fff;
-  font-size: 48px;
-  text-align: center;
+export const Left = styled.div``
+export const Right = styled.div``
 
-  @media screen and (max-width: 768px) {
-    font-size: 40px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 32px;
-  }
-`;
-
-export const HeroP = styled.p`
-  margin-top: 24px;
-  color: #fff;
-  font-size: 24px;
-  text-align: center;
+export const Titles = styled.div`
+  font-size: 1.4rem;
+  color: #312f3a;
+  text-transform: capitalize;
+  line-height: 1.4;
+`
+export const Text = styled.p`
+  color: #919191;
+  font-size: 1.1rem;
+  margin: 1.9rem 0 2.5rem;
   max-width: 600px;
-
-  @media screen and (max-width: 768px) {
-    font-size: 24px;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 18px;
-  }
-`;
-
-export const ArrowDownward = styled(MdKeyboardArrowDown)`
-  margin-left: 8px;
-  font-size: 20px;
-`;
-
-export const ArrowUpward = styled(MdKeyboardArrowUp)`
-  margin-left: 8px;
-  font-size: 20px;
-`;
-
-export const ButtonWrapper = styled.div`
-  margin-top: 625px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  button {
-    color: #43e4db;
-  }
-`;
-
-export const Button = styled.button`
-  border-radius: 50px;
-  background: #01bf71;
-  white-space: nowrap;
-  color: #010606;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.2s ease-in-out;
-  text-decoration: none;
-
-  &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-  }
+  line-height: 2.3;
 `
+
+
 
 

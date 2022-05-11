@@ -1,13 +1,9 @@
-// import Hero from '../components/Hero'
-import Nav from '../components/Nav'
-
-import React from 'react'
+import LandingPage from '../components/LandingPage'
 
 function Home() {
   return (
     <>
-      <Nav />
-      {/* <Hero /> */}
+      <LandingPage />
     </>
   )
 }
