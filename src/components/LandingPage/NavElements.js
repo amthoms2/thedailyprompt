@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link as LinkScroll } from 'react-scroll';
 
 export const Nav = styled.div`
   /* background-color: #f1f8fc;
@@ -14,18 +15,19 @@ export const Nav = styled.div`
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
   } */
-  position: relative;
+  /* position: relative; */
   padding: 1.7rem 0 2rem;
   width: 100%;
+  min-height: 100vh;
   overflow: hidden;
   background-color: #f1f8fc;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column;
   justify-content: space-between;
 
   @media screen and (max-width: 960px) {
     transition: 0.8s all ease;
-  }
+  } */
 `;
 export const Img = styled.img`
   position: absolute;
@@ -40,12 +42,6 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  max-width: 81rem;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 3rem;
-  z-index: 10;
 `;
 
 export const Logo = styled.div`
@@ -60,7 +56,15 @@ export const LogoImg = styled.img`
   margin-top: -0.6rem;
 `;
 
-export const NavItem = styled.div``;
+export const H3 = styled.h3`
+  color: #45424b;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  font-weight: 700;
+`;
+
+
+export const NavMenu = styled.div``;
 
 export const List = styled.ul`
   display: flex;
@@ -72,11 +76,24 @@ export const ListItem = styled.li`
   margin-left: 4.5rem;
   display: inline-block;
   transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    color: #5bacdf;
+    transform: scale(1.05);
+  }
 `;
 
-export const H3 = styled.h3`
-  color: #45424b;
-  font-size: 1.55rem;
-  line-height: 1.2;
-  font-weight: 700;
-`
+export const Scroll = styled(LinkScroll)`
+  /* color: white; */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+
+  &.active {
+    border-bottom: 3px solid #01bf71;
+  }
+`;
