@@ -56,7 +56,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 const CodeBox = () => {
   const [expanded, setExpanded] = useState('panel1');
   const [algoInput, setAlgoInput] = useState('');
-  const [results, setResults] = useState({});
+  const [results, setResults] = useState([]);
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -71,14 +71,14 @@ const CodeBox = () => {
       },
       body: { algo: algoInput },
     });
-    console.log(response);
-    // setResults(results.concat(response));
-    setResults({
-      algo: algoInput.toString(),
-      response: `The time complexity of this function is ${response}`
-    });
+    setResults((results) => [
+      {
+        algo: algoInput.toString(),
+        response: `The time complexity of this function is ${response}`,
+      },
+      ...results,
+    ]);
   };
-
 
   return (
     <CodeBoxWrapper>
@@ -102,29 +102,28 @@ const CodeBox = () => {
           </Col1>
 
           <Col2>
-            {algoInput ? (
+            {results.map((result) => (
               <Accordion
-                expanded={expanded === 'panel1'}
-                onChange={handleChange('panel1')}
+                key={result.algo}
+                expanded={expanded === result.algo}
+                onChange={handleChange(result.algo)}
               >
                 <AccordionSummary
                   aria-controls="panel1d-content"
                   id="panel1d-header"
                 >
-                  <Typography>{algoInput}</Typography>
+                  <Typography>{result.algo}</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
                     <Typography sx={{ color: 'text.secondary' }}>
-                      {results.algo}
+                      {result.algo}
                     </Typography>
-                    {results.response}
+                    {result.response}
                   </Typography>
                 </AccordionDetails>
               </Accordion>
-            ) : (
-              <h1>function goes here</h1>
-            )}
+            ))}
           </Col2>
         </Row>
       </CodeBoxContainer>
