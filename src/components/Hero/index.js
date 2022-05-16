@@ -15,6 +15,7 @@ const Hero = () => {
     <>
       <HeroWrapper>
         <HeroContainer>
+
             <Left>
               <Titles>
                 <h1>Future is here,</h1>

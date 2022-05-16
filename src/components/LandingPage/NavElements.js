@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { laptop } from '../../responsive';
 import { Link as LinkScroll } from 'react-scroll';
 
 export const Nav = styled.div`
@@ -61,6 +62,8 @@ export const H3 = styled.h3`
   font-size: 1.55rem;
   line-height: 1.2;
   font-weight: 700;
+
+  ${laptop({ fontSize: '1rem' })};
 `;
 
 

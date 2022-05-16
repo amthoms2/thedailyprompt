@@ -1,5 +1,7 @@
 import LandingPage from '../components/LandingPage';
-import styled from 'styled-components'
+import CodeBox from '../components/CodeBox';
+import {mobile} from '../responsive'
+import styled from 'styled-components';
 
 const Wrapper = styled.div`
   position: relative;
@@ -11,8 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`
-
+`;
 
 const Container = styled.div`
   position: relative;
@@ -21,16 +22,19 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 0 3rem;
   z-index: 10;
-`
+
+  ${mobile({ padding: '0 1.5rem' })};
+`;
 
 function Home() {
   return (
     <>
-    <Wrapper>
-    <Container>
-      <LandingPage />
-      </Container>
+      <Wrapper>
+        <Container>
+          <LandingPage />
+        </Container>
       </Wrapper>
+      <CodeBox/>
     </>
   );
 }
