@@ -15,6 +15,7 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
+import generate from '../../api/generate';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -54,9 +55,27 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 const CodeBox = () => {
   const [expanded, setExpanded] = useState('panel1');
+  const [algoInput, setAlgoInput] = useState('');
+  // eslint-disable-next-line
+  const [result, setResult] = useState();
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
+  };
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const response = await generate({
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36',
+      },
+      body: { algo: algoInput },
+    });
+    console.log(response);
+    setResult(response);
+    setAlgoInput('');
   };
 
   function solveMeFirst(a, b) {
@@ -73,6 +92,20 @@ const CodeBox = () => {
         <Row>
           <Col1>
             <Heading>hey</Heading>
+            <form onSubmit={onSubmit}>
+              <input
+                type="text"
+                name="algo"
+                placeholder="Enter an algo"
+                value={algoInput}
+                onChange={(e) =>
+                  {
+                    setAlgoInput(e.target.value)
+
+                  }}
+              />
+              <input type="submit" value="Generate algos" />
+            </form>
             <TextArea></TextArea>
           </Col1>
 
