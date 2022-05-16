@@ -36,37 +36,37 @@ const LandingPage = () => {
   return (
     <>
       {/* <Nav scroll={scroll}> */}
-        {/* <Img src={img} /> */}
-        <header style={{ position: 'relative', zIndex: '70' }}>
-          <NavContainer scroll={scroll}>
-            <Logo>
-              <LogoImg src={img} alt="Logo" />
-              <H3>bigOcean</H3>
-            </Logo>
+      {/* <Img src={img} /> */}
+      <header style={{ position: 'relative', zIndex: '70' }}>
+        <NavContainer scroll={scroll}>
+          <Logo>
+            <LogoImg src={img} alt="Logo" />
+            <H3>bigOcean</H3>
+          </Logo>
 
-            <NavMenu>
-              <List>
-                <ListItem>
-                  <Scroll
-                    scroll={scroll}
-                    to="code"
-                    smooth={'true'}
-                    duration={500}
-                    spy={'true'}
-                    exact="true"
-                    offset={-80}
-                  >
-                    Practice
-                  </Scroll>
-                </ListItem>
+          <NavMenu>
+            <List>
+              <ListItem>
+                <Scroll
+                  scroll={scroll}
+                  to="code"
+                  smooth={'true'}
+                  duration={500}
+                  spy={'true'}
+                  exact="true"
+                  offset={-80}
+                >
+                  Practice
+                </Scroll>
+              </ListItem>
 
-                <ListItem>Play</ListItem>
-              </List>
-            </NavMenu>
-          </NavContainer>
-        </header>
+              <ListItem>Play</ListItem>
+            </List>
+          </NavMenu>
+        </NavContainer>
+      </header>
 
-        <Hero />
+      <Hero />
       {/* </Nav> */}
     </>
   );
