@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   CodeBoxWrapper,
   CodeBoxContainer,
@@ -79,6 +79,15 @@ const CodeBox = () => {
       ...results,
     ]);
   };
+
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem('LAST_10_RESULTS'));
+    if (data !== null) setResults((prev) => [...prev, ...data]);
+  }, []);
+
+  useEffect(() => {
+    window.localStorage.setItem('LAST_10_RESULTS', JSON.stringify(results));
+  }, [results]);
 
   return (
     <CodeBoxWrapper>
