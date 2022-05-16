@@ -77,7 +77,6 @@ const CodeBox = () => {
       algo: algoInput.toString(),
       response: `The time complexity of this function is ${response}`
     });
-    // setAlgoInput('');
   };
 
 
