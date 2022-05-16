@@ -56,8 +56,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 const CodeBox = () => {
   const [expanded, setExpanded] = useState('panel1');
   const [algoInput, setAlgoInput] = useState('');
-  // eslint-disable-next-line
-  const [result, setResult] = useState();
+  const [results, setResults] = useState({});
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
@@ -69,23 +68,18 @@ const CodeBox = () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'User-Agent':
-          'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36',
       },
       body: { algo: algoInput },
     });
     console.log(response);
-    setResult(response);
-    setAlgoInput('');
+    // setResults(results.concat(response));
+    setResults({
+      algo: algoInput.toString(),
+      response: `The time complexity of this function is ${response}`
+    });
+    // setAlgoInput('');
   };
 
-  function solveMeFirst(a, b) {
-    while (a >= 1 && b <= 1000) {
-      return a + b;
-    }
-  }
-
-  const timeComplexity = 'O(1) because the while loop will only run once';
 
   return (
     <CodeBoxWrapper>
@@ -109,45 +103,29 @@ const CodeBox = () => {
           </Col1>
 
           <Col2>
-            <Accordion
-              expanded={expanded === 'panel1'}
-              onChange={handleChange('panel1')}
-            >
-              <AccordionSummary
-                aria-controls="panel1d-content"
-                id="panel1d-header"
+            {algoInput ? (
+              <Accordion
+                expanded={expanded === 'panel1'}
+                onChange={handleChange('panel1')}
               >
-                <Typography>Collapsible Group Item #1</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  <Typography sx={{ color: 'text.secondary' }}>
-                    {solveMeFirst.toString()}
+                <AccordionSummary
+                  aria-controls="panel1d-content"
+                  id="panel1d-header"
+                >
+                  <Typography>{algoInput}</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    <Typography sx={{ color: 'text.secondary' }}>
+                      {results.algo}
+                    </Typography>
+                    {results.response}
                   </Typography>
-                  {`The time complexity of this function is ${timeComplexity}`}
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-
-            <Accordion
-              expanded={expanded === 'panel2'}
-              onChange={handleChange('panel2')}
-            >
-              <AccordionSummary
-                aria-controls="panel1d-content"
-                id="panel1d-header"
-              >
-                <Typography>Collapsible Group Item #2</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography>
-                  <Typography sx={{ color: 'text.secondary' }}>
-                    {solveMeFirst.toString()}
-                  </Typography>
-                  {`The time complexity of this function is ${timeComplexity}`}
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
+                </AccordionDetails>
+              </Accordion>
+            ) : (
+              <h1>function goes here</h1>
+            )}
           </Col2>
         </Row>
       </CodeBoxContainer>
