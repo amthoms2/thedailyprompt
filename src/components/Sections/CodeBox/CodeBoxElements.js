@@ -5,6 +5,7 @@ export const TextArea = styled.textarea`
 width: 575px;
 height: 411px;
 background: aliceblue;
+font-size: 18px;
 &::placeholder {
   padding: 20px;
   font-size: 16px;

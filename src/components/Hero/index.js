@@ -7,7 +7,7 @@ import {
   Text,
   Img,
 } from './HeroElements';
-import vid from '../../media/game.mov';
+import vid from '../../media/algo.mov';
 // import vid from '../../media/zoom0.mp4'
 
 const Hero = () => {
