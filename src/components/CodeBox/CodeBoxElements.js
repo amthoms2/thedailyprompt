@@ -40,6 +40,13 @@ export const Col2 = styled.div`
 `;
 
 export const TextArea = styled.textarea`
+width: 575px;
+height: 411px;
+background: aliceblue;
+&::placeholder {
+  padding: 20px;
+  font-size: 16px;
+  }
   /* width: 80%;
   height: 30vh; */
 `;

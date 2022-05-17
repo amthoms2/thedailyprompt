@@ -8,9 +8,8 @@ import {
   Heading,
   TextArea,
   SpinnerImg,
-  Error
+  Error,
 } from './CodeBoxElements';
-
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
@@ -18,6 +17,7 @@ import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import generate from '../../api/generate';
+import Button from '@mui/material/Button';
 
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -38,9 +38,7 @@ const AccordionSummary = styled((props) => (
   />
 ))(({ theme }) => ({
   backgroundColor:
-    theme.palette.mode === 'dark'
-      ? 'rgba(255, 255, 255, .05)'
-      : 'rgba(0, 0, 0, .03)',
+    theme.palette.mode === 'dark' ? 'rgba(255, 255, 255, .05)' : 'aliceblue',
   flexDirection: 'row-reverse',
   '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
     transform: 'rotate(90deg)',
@@ -61,10 +59,8 @@ const Spinner = ({ loading }) => {
   ) : null;
 };
 
-const Message = ({status, text}) => {
-  return status && status !== 'loading' ? (
-    <Error>{text}</Error>
-  ) : null;
+const Message = ({ status, text }) => {
+  return status && status !== 'loading' ? <Error>{text}</Error> : null;
 };
 
 const CodeBox = () => {
@@ -99,7 +95,6 @@ const CodeBox = () => {
       setStatus('');
     } catch (err) {
       setStatus('error');
-      <Error>Sorry</Error>
       console.log(err);
     }
   };
@@ -120,7 +115,7 @@ const CodeBox = () => {
           <Col1>
             <Heading>hey</Heading>
             <form onSubmit={onSubmit}>
-              <input
+              <TextArea
                 type="text"
                 name="algo"
                 placeholder="Enter an algo"
@@ -129,11 +124,11 @@ const CodeBox = () => {
                   setAlgoInput(e.target.value);
                 }}
               />
-              <input type="submit" value="Generate algos" />
+              <Button type="submit" variant="contained" disabled={!algoInput} style={{backgroundColor: "lightcyan", color: "black"}}>Generate</Button>
+              {/* <input type="submit" value="Generate algos" /> */}
               <Spinner loading={status === 'loading' && true} />
               <Message status={status} text={'Error'} />
             </form>
-            <TextArea></TextArea>
           </Col1>
 
           <Col2>
