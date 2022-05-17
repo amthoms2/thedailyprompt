@@ -47,8 +47,7 @@ background: aliceblue;
   padding: 20px;
   font-size: 16px;
   }
-  /* width: 80%;
-  height: 30vh; */
+  ${laptop({ width: '100%', transform: 'none' })};
 `;
 
 export const Heading = styled.h1`

@@ -125,7 +125,6 @@ const CodeBox = () => {
                 }}
               />
               <Button type="submit" variant="contained" disabled={!algoInput} style={{backgroundColor: "lightcyan", color: "black"}}>Generate</Button>
-              {/* <input type="submit" value="Generate algos" /> */}
               <Spinner loading={status === 'loading' && true} />
               <Message status={status} text={'Error'} />
             </form>
