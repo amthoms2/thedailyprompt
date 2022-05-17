@@ -7,8 +7,8 @@ import {
   Text,
   Img,
 } from './HeroElements';
-// import img from '../../media/ocean.jpg';
-import vid from '../../media/nailsvid.mp4';
+import vid from '../../media/game.mov';
+// import vid from '../../media/zoom0.mp4'
 
 const Hero = () => {
   return (
@@ -21,10 +21,9 @@ const Hero = () => {
                 <h1>Future is here,</h1>
                 <h1>Start Exploring now.</h1>
               </Titles>
-              <Text>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Delectus eius distinctio odit, magni magnam qui ex perferendis
-                vitae!
+
+              <Text style={{ whiteSpace: "pre-line" }}>
+              {'A website for practicing algorithms, improving your skills and becoming a better programmer.<br/> <br/> To practice: Copy and paste a function in any language to generate its time complexity. See example video ->  <br/> <br/>To play: Follow the link below and play solo or with up to 3 friends'.split('<br/>').join('\n')}
               </Text>
             </Left>
 

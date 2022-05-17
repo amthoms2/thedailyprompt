@@ -10,7 +10,7 @@ import {
   ListItem,
   Scroll,
   H3,
-} from './NavElements';
+} from './LandingPageElements';
 import Hero from '../Hero';
 import img from '../../media/logo.png';
 
@@ -36,7 +36,6 @@ const LandingPage = () => {
   return (
     <>
       {/* <Nav scroll={scroll}> */}
-      {/* <Img src={img} /> */}
       <header style={{ position: 'relative', zIndex: '70' }}>
         <NavContainer scroll={scroll}>
           <Logo>

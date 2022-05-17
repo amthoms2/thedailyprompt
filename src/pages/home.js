@@ -1,5 +1,6 @@
 import LandingPage from '../components/LandingPage';
-import CodeBox from '../components/CodeBox';
+import CodeBox from '../components/Sections/CodeBox';
+import Play from '../components/Sections/Play';
 import {mobile} from '../responsive'
 import styled from 'styled-components';
 
@@ -35,6 +36,7 @@ function Home() {
         </Container>
       </Wrapper>
       <CodeBox/>
+      <Play/>
     </>
   );
 }
