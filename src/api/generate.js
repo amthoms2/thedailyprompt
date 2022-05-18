@@ -4,7 +4,7 @@ const configuration = new Configuration({
   apiKey: process.env.REACT_APP_OPENAI_KEY,
 });
 const openai = new OpenAIApi(configuration);
-
+// eslint-disable-next-line
 export default async function (req) {
   const completion = await openai.createCompletion("text-curie-001", {
     prompt: generatePrompt(req.body.algo),
