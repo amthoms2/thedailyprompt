@@ -7,7 +7,7 @@ import {
   Heading,
 } from '../SectionElements';
 import { Video, Text } from './PlayElements';
-import vid from '../../../media/game.mov';
+import vid from '../../../media/game.mp4';
 import { Element } from 'react-scroll';
 
 const Play = () => {
