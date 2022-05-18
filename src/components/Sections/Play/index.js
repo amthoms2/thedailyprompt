@@ -25,12 +25,12 @@ const Play = () => {
                 .join('\n')}
             </Text>
 
-            {/* <a
+            <a
               href="https://one-big-ocean.herokuapp.com/"
               style={{ textDecoration: 'none' }}
             >
               Play Here!
-            </a> */}
+            </a>
           </Col1>
 
           <Col2>

@@ -6,6 +6,7 @@ export const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  ${laptop({ marginLeft: '-43px' })};
 `;
 
 export const Logo = styled.div`

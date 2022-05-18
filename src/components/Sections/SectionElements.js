@@ -17,6 +17,8 @@ export const SectionContainer = styled.div`
   margin-left: auto;
   padding: 0 24px;
   justify-content: center;
+
+  ${laptop({ height: 'fit-content', padding: 'inherit'})};
 `;
 
 export const Row = styled.div`
