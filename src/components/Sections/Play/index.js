@@ -36,7 +36,7 @@ const Play = () => {
           <Col2>
             <Video
               autoPlay
-              loop
+              // loop
               muted
               src={vid}
               type="video/mp4"

@@ -30,7 +30,7 @@ const Hero = () => {
           <Right>
             <Img
               autoPlay
-              loop
+              // loop
               muted
               src={vid}
               type="video/mp4"
