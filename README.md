@@ -29,7 +29,7 @@
 ## Notes
 Problems ->
 * Heroku build fail - "Javascript heap out of memory"
-  - I cleaned up my code and removed any unncessary loops
+  - I cleaned up my code and removed any unnecessary loops
   - I replaced my .mov files to .mp4 files
 * Inactive Heroku apps need longer time to load
 * Screen recording of app?
