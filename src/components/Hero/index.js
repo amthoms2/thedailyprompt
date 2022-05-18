@@ -7,7 +7,7 @@ import {
   Text,
   Img,
 } from './HeroElements';
-import vid from '../../media/algo.mov';
+import vid from '../../media/algo.mp4';
 import { Element } from 'react-scroll';
 
 const Hero = () => {
