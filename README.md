@@ -27,7 +27,7 @@
 * Material UI
 
 ## Notes
-Problems ->
+<strong>Problems</strong>
 * Heroku build fail - "Javascript heap out of memory"
   - I cleaned up my code and removed any unnecessary loops
   - I replaced my .mov files to .mp4 files
@@ -36,11 +36,11 @@ Problems ->
 * The git repository has the original name of 'thedailyprompt'
   - I did not want to change this for fear of crashing the app
 
-Improvements ->
+<strong>Improvements</strong>
 * Make mobile friendly
 * Add mobile icon bars at top to display menu depending on screen size
 
-Extras ->
+<strong>Extras</strong>
 * Save responses if the user leaves or reloads the page
 * Make the app more specific to a single purpose (algos)
 
