@@ -35,7 +35,6 @@ const Play = () => {
 
           <Col2>
             <Video
-              href="/"
               autoPlay
               loop
               muted
