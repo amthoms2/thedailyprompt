@@ -20,6 +20,7 @@
 * The list can be cleared by the click of a button
 * A link to an algorithm game can be clicked if user wants to play
 
+
 ## Technologies
 * OpenAI
 * React
@@ -31,7 +32,15 @@ Problems ->
   - I cleaned up my code and removed any unncessary loops
   - I replaced my .mov files to .mp4 files
 * Inactive Heroku apps need longer time to load
+* Screen recording of app?
 
+Improvements ->
+* Make mobile friendly
+* Add mobile icon bars at top to display menu depending on screen size
+
+Extras ->
+* Save responses if the user leaves or reloads the page
+* Make the app more specific to a single purpose (algos)
 
 ## Contact Me (Junior Developer)
 
