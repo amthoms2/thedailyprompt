@@ -38,7 +38,13 @@ const Footer = () => {
                 </HREF>
               </FooterItems>
               <FooterItems>
-              <p style={{fontSize: '11px'}}>*disclaimer: The accuracy of any open API must not be relied upon and is not guaranteed. All information is provided "as is", with no guarantee of completeness, accuracy or timeliness. The user of any open API should make their own independent inquiries before relying on the information.</p>
+                <p style={{ fontSize: '11px' }}>
+                  *disclaimer: The accuracy of any open API must not be relied
+                  upon and is not guaranteed. All information is provided "as
+                  is", with no guarantee of completeness, accuracy or
+                  timeliness. The user of any open API should make their own
+                  independent inquiries before relying on the information.
+                </p>
               </FooterItems>
             </LinksWrapper>
           </FooterLinks>

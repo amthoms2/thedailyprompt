@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
-import {SectionWrapper, SectionContainer, Row, Col1, Col2, Heading} from '../SectionElements'
 import {
-  TextArea,
-  SpinnerImg,
-  Error,
-} from './CodeBoxElements';
+  SectionWrapper,
+  SectionContainer,
+  Row,
+  Col1,
+  Col2,
+  Heading,
+} from '../SectionElements';
+import { TextArea, SpinnerImg, Error } from './CodeBoxElements';
 import { styled } from '@mui/material/styles';
 import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
 import MuiAccordion from '@mui/material/Accordion';
@@ -115,12 +118,18 @@ const CodeBox = () => {
                 name="algo"
                 placeholder="Enter an algo"
                 value={algoInput}
-                autofocus="on"
                 onChange={(e) => {
                   setAlgoInput(e.target.value);
                 }}
               />
-              <Button type="submit" variant="contained" disabled={!algoInput} style={{backgroundColor: "lightcyan", color: "black"}}>Generate</Button>
+              <Button
+                type="submit"
+                variant="contained"
+                disabled={!algoInput}
+                style={{ backgroundColor: 'lightcyan', color: 'black' }}
+              >
+                Generate
+              </Button>
               <Spinner loading={status === 'loading' && true} />
               <Message status={status} text={'Error'} />
             </form>

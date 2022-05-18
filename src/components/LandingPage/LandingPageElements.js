@@ -1,23 +1,6 @@
 import styled from 'styled-components';
-import { laptop } from '../../responsive';
+import { laptop, mobile } from '../../responsive';
 import { Link as LinkScroll } from 'react-scroll';
-
-export const Nav = styled.div`
-  padding: 1.7rem 0 2rem;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  background-color: #f1f8fc;
-  display: flex;
-`;
-export const Img = styled.img`
-  position: absolute;
-  z-index: 0;
-  width: 500px;
-  bottom: -180px;
-  left: -15px;
-  opacity: 0.1;
-`;
 
 export const NavContainer = styled.div`
   display: flex;
@@ -46,7 +29,6 @@ export const H3 = styled.h3`
   ${laptop({ fontSize: '1rem' })};
 `;
 
-
 export const NavMenu = styled.div``;
 
 export const List = styled.ul`
@@ -68,13 +50,14 @@ export const ListItem = styled.li`
 `;
 
 export const Scroll = styled(LinkScroll)`
-  /* color: white; */
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+
+  ${laptop({ fontSize: '14px', padding: '0' })};
 
   &.active {
     border-bottom: 3px solid #01bf71;

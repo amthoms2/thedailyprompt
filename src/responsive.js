@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+import { css } from 'styled-components';
 
 export const laptop = (props) => {
   return css`
@@ -15,4 +15,3 @@ export const mobile = (props) => {
     }
   `;
 };
-

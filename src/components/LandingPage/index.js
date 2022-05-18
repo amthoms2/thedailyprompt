@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
-// import { Element } from 'react-scroll';
 import {
-  // Nav,
   NavContainer,
   Logo,
   LogoImg,
@@ -15,11 +13,7 @@ import Hero from '../Hero';
 import img from '../../media/logo.png';
 
 const LandingPage = () => {
-  const [scroll, setScroll] = useState(false);
-
-  // const toggleHome = () => {
-  //   scrollUp.scrollToTop();
-  // };
+  const [scroll, setScroll] = useState('false');
 
   const scrollChange = () => {
     if (window.scrollY >= 80) {
@@ -35,7 +29,6 @@ const LandingPage = () => {
 
   return (
     <>
-      {/* <Nav scroll={scroll}> */}
       <header style={{ position: 'relative', zIndex: '70' }}>
         <NavContainer scroll={scroll}>
           <Logo>

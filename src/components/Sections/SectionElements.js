@@ -1,9 +1,10 @@
-import styled from "styled-components";
-import {laptop, mobile} from '../../responsive';
+import styled from 'styled-components';
+import { laptop, mobile } from '../../responsive';
 
 export const SectionWrapper = styled.div`
   color: ${({ color }) => (color === 'light' ? '#fff' : 'black')};
-  background: ${({ background }) => (background === 'dark' ? '#010606' : 'aliceblue')};
+  background: ${({ background }) =>
+    background === 'dark' ? '#010606' : 'aliceblue'};
 `;
 
 export const SectionContainer = styled.div`

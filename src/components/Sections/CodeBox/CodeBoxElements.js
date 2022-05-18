@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import {laptop} from '../../../responsive'
+import { laptop } from '../../../responsive';
 
 export const TextArea = styled.textarea`
-width: 575px;
-height: 411px;
-background: aliceblue;
-font-size: 18px;
-&::placeholder {
-  padding: 20px;
-  font-size: 16px;
+  width: 575px;
+  height: 411px;
+  background: aliceblue;
+  font-size: 18px;
+  &::placeholder {
+    padding: 20px;
+    font-size: 16px;
   }
   ${laptop({ width: '100%', transform: 'none' })};
 `;

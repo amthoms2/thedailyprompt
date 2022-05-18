@@ -16,5 +16,5 @@ export const Text = styled.p`
   line-height: 2.3;
 
   ${mobile({ margin: '1.1rem 0 1.5rem' })};
-  ${laptop({ fontSize: '1rem', margin: '1.4rem 0 1.5rem'})};
+  ${laptop({ fontSize: '1rem', margin: '1.4rem 0 1.5rem' })};
 `;

@@ -9,7 +9,6 @@ import {
 import { Video, Text } from './PlayElements';
 import vid from '../../../media/game.mov';
 import { Element } from 'react-scroll';
-import Button from '@mui/material/Button';
 
 const Play = () => {
   return (
@@ -21,7 +20,7 @@ const Play = () => {
               <Heading>Think you're good at algorithms? Prove it!</Heading>
             </Element>
             <Text style={{ whiteSpace: 'pre-line' }}>
-              {'One-big-Ocean is a web-based multiplayer game that helps players learn about big-O notation by navigating an underwater adventure.<br/> <br/> By collecting pearls and answering questions, players can work together (or solo) to pass each level before the timer runs out.<br/> <br/>If all the levels are passed, then the game is won as a team, while individuals are ranked by pearls and points. '
+              {'One-big-Ocean is a web-based multiplayer game that helps players learn about big-O notation by navigating an underwater adventure<br/> <br/> By collecting pearls and answering questions, players can work together (or solo) to pass each level before the timer runs out<br/> <br/>If all the levels are passed, then the game is won as a team, while individuals are ranked by pearls and points '
                 .split('<br/>')
                 .join('\n')}
             </Text>

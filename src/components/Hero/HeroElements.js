@@ -12,32 +12,23 @@ export const HeroContainer = styled.div`
   justify-content: center;
   height: 760px;
 
-  ${laptop({ gridTemplateColumns: '1fr', justifyContent: 'center', gridGap: '2rem' })};
-
-  /* justify-content: space-between;
-  align-items: center;
-  position: relative;
-  max-width: 81rem;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 3rem;
-  z-index: 10; */
+  ${laptop({
+    gridTemplateColumns: '1fr',
+    justifyContent: 'center',
+    gridGap: '2rem',
+  })};
 `;
-
 
 export const Img = styled.video`
   width: 100%;
-  /* height: 80vh; */
   transform: translate(0%, 70px);
 
   ${laptop({ width: '100%', transform: 'none' })};
-
 `;
 
 export const Left = styled.div``;
 
-export const Right = styled.div`
-`;
+export const Right = styled.div``;
 
 export const Title = styled.div`
   font-size: 1.4rem;
@@ -57,5 +48,5 @@ export const Text = styled.p`
   line-height: 2.3;
 
   ${mobile({ margin: '1.1rem 0 1.5rem' })};
-  ${laptop({ fontSize: '1rem', margin: '1.4rem 0 1.5rem'})};
+  ${laptop({ fontSize: '1rem', margin: '1.4rem 0 1.5rem' })};
 `;
