@@ -40,9 +40,9 @@
 * Make mobile friendly
 * Add mobile icon bars at top to display menu depending on screen size
 
-<strong>Extras</strong>
-* Save responses if the user leaves or reloads the page
-* Make the app more specific to a single purpose (algos)
+<strong>Extras Added</strong>
+* Persistence - Saved responses if the user leaves or reloads the page
+* Made the app more specific to a single purpose (algos)
 
 ## Contact Me (Junior Developer)
 
