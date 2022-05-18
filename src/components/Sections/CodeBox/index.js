@@ -115,6 +115,7 @@ const CodeBox = () => {
                 name="algo"
                 placeholder="Enter an algo"
                 value={algoInput}
+                autofocus="on"
                 onChange={(e) => {
                   setAlgoInput(e.target.value);
                 }}

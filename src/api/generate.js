@@ -16,5 +16,3 @@ export default async function (req) {
 function generatePrompt(algo) {
   return `${algo} \n\nThe time complexity of this function is`
 }
-
-//fetch issues

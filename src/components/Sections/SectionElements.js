@@ -45,5 +45,5 @@ export const Heading = styled.h1`
   line-height: 1.1;
   font-weight: 600;
   color: ${({ color }) => (color === 'light' ? '#f7f8fa' : '#312F3A')};
-  ${mobile({ fontSize: '32px' })};
+  ${mobile({ fontSize: '32px', paddingTop: '30px' })};
 `;

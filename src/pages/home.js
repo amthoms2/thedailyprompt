@@ -1,12 +1,13 @@
 import LandingPage from '../components/LandingPage';
 import CodeBox from '../components/Sections/CodeBox';
 import Play from '../components/Sections/Play';
-import {mobile} from '../responsive'
+import Footer from '../components/Footer';
+import { mobile } from '../responsive';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
   position: relative;
-  padding: 1.7rem 0 2rem;
+  padding: 1.7rem 0 0;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
@@ -34,9 +35,10 @@ function Home() {
         <Container>
           <LandingPage />
         </Container>
+        <CodeBox />
+        <Play />
+        <Footer />
       </Wrapper>
-      <CodeBox/>
-      <Play/>
     </>
   );
 }

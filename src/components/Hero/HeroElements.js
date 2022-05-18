@@ -10,6 +10,7 @@ export const HeroContainer = styled.div`
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
+  height: 760px;
 
   ${laptop({ gridTemplateColumns: '1fr', justifyContent: 'center', gridGap: '2rem' })};
 
@@ -26,7 +27,7 @@ export const HeroContainer = styled.div`
 
 export const Img = styled.video`
   width: 100%;
-  height: 80vh;
+  /* height: 80vh; */
   transform: translate(0%, 70px);
 
   ${laptop({ width: '100%', transform: 'none' })};
@@ -38,7 +39,7 @@ export const Left = styled.div``;
 export const Right = styled.div`
 `;
 
-export const Titles = styled.div`
+export const Title = styled.div`
   font-size: 1.4rem;
   color: #312f3a;
   text-transform: capitalize;

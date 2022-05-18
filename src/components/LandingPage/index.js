@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { animateScroll as scrollUp } from 'react-scroll';
+// import { Element } from 'react-scroll';
 import {
   // Nav,
   NavContainer,
@@ -17,9 +17,9 @@ import img from '../../media/logo.png';
 const LandingPage = () => {
   const [scroll, setScroll] = useState(false);
 
-  const toggleHome = () => {
-    scrollUp.scrollToTop();
-  };
+  // const toggleHome = () => {
+  //   scrollUp.scrollToTop();
+  // };
 
   const scrollChange = () => {
     if (window.scrollY >= 80) {
@@ -48,25 +48,36 @@ const LandingPage = () => {
               <ListItem>
                 <Scroll
                   scroll={scroll}
-                  to="code"
+                  to="practice"
                   smooth={'true'}
                   duration={500}
                   spy={'true'}
                   exact="true"
-                  offset={-80}
+                  offset={700}
                 >
                   Practice
                 </Scroll>
               </ListItem>
 
-              <ListItem>Play</ListItem>
+              <ListItem>
+                <Scroll
+                  scroll={scroll}
+                  to="play"
+                  smooth={'true'}
+                  duration={500}
+                  spy={'true'}
+                  exact="true"
+                  offset={-70}
+                >
+                  Play
+                </Scroll>
+              </ListItem>
             </List>
           </NavMenu>
         </NavContainer>
       </header>
 
       <Hero />
-      {/* </Nav> */}
     </>
   );
 };

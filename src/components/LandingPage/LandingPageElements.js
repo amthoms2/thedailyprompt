@@ -3,32 +3,12 @@ import { laptop } from '../../responsive';
 import { Link as LinkScroll } from 'react-scroll';
 
 export const Nav = styled.div`
-  /* background-color: #f1f8fc;
-  height: 80px;
-  margin-top: -80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  @media screen and (max-width: 960px) {
-    transition: 0.8s all ease;
-  } */
-  /* position: relative; */
   padding: 1.7rem 0 2rem;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
   background-color: #f1f8fc;
   display: flex;
-  /* flex-direction: column;
-  justify-content: space-between;
-
-  @media screen and (max-width: 960px) {
-    transition: 0.8s all ease;
-  } */
 `;
 export const Img = styled.img`
   position: absolute;
