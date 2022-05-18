@@ -33,6 +33,8 @@ Problems ->
   - I replaced my .mov files to .mp4 files
 * Inactive Heroku apps need longer time to load
 * Screen recording of app?
+* The git repository has the original name of 'thedailyprompt'
+  - I did not want to change this for fear of crashing the app
 
 Improvements ->
 * Make mobile friendly
