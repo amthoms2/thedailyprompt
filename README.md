@@ -41,7 +41,7 @@
 * Add mobile icon bars at top to display menu depending on screen size
 
 <strong>Extras Added</strong>
-* Persistence - Saved responses if the user leaves or reloads the page
+* Persistence after refresh
 * Made the app more specific to a single purpose (algos)
 
 ## Contact Me (Junior Developer)
